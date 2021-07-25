@@ -3,6 +3,7 @@ const dataApi = fetch("http://localhost:3000/api/cameras")
 dataApi.then(async (resData)=> {
     console.log(resData);
     let res = await resData.json();
+    affichageProduits(res);
     console.log(res);
 })
 //**********************************************************FIN DE RECUPERATION DE DONNES*************************************
@@ -53,4 +54,4 @@ function affichageProduits(resultat){
     }
 }
 //Affichage produits en temps reel en appelant la fonction (resultat) 
-affichageProduits(resultat);
+// affichageProduits(resultat);
